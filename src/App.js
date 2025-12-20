@@ -44,7 +44,8 @@ function App() {
           <p>Weather Descriptions: {weatherData.current.weather_descriptions.join(", ")}</p>
           <button
             onClick={() => {
-              setfavourite([...favourite, weatherData.location.name]);
+              if (!favourite.includes(weatherData.location.name))
+                setfavourite([...favourite, weatherData.location.name]);
             }}
           >
             Add to Favourites
