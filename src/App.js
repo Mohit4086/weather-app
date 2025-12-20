@@ -9,6 +9,8 @@ import '@fontsource/roboto/700.css';
 import SearchBar from "./components/searchbar";
 import WeatherInfo from "./components/weatherInfo";
 import FavouriteList from "./components/favouriteList";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 function App() {
   const [inputCity, setInputCity] = useState("");
@@ -33,7 +35,13 @@ function App() {
 
   return (
     <div>
-      <h1>Weather App</h1>
+      {/* <h1>Weather App</h1> */}
+
+      <Typography variant="h1" sx={{ textAlign: "center", marginTop: 2 }}>
+        Weather App
+      </Typography>
+
+      <Divider sx={{ marginY: 2 }} />
 
       <SearchBar
         inputCity={inputCity}
