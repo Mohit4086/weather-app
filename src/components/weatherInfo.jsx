@@ -5,6 +5,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import Button from '@mui/material/Button';
 
 function WeatherInfo({ weatherData, favourite, setFavourite }) {
   const cityName = weatherData.location.name;
@@ -28,7 +29,7 @@ function WeatherInfo({ weatherData, favourite, setFavourite }) {
     //   <button onClick={addToFavourites}>Add to Favourites</button>
     // </div>
 
-    <Card sx={{ minWidth: 275, marginTop: 2, padding: 2 }}>
+    <Card sx={{ minWidth: 275, marginTop: 2, padding: 2, textAlign: 'center' }}>
       <CardContent>
         <h2>Weather in {cityName}</h2>
         <p>Temperature: {weatherData.current.temperature}°C</p>
@@ -38,7 +39,9 @@ function WeatherInfo({ weatherData, favourite, setFavourite }) {
             Weather Descriptions:{" "}
             {weatherData.current.weather_descriptions.join(", ")}
         </p>
-        <button onClick={addToFavourites}>Add to Favourites</button>
+        <Button variant="contained" color="primary" onClick={addToFavourites} size="small">
+          Add to Favourites
+      </Button>
       </CardContent>
     </Card>
   );

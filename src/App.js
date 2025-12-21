@@ -34,7 +34,7 @@ function App() {
   }, [inputCity, click]);
 
   return (
-    <div>
+    <div className="App">
       {/* <h1>Weather App</h1> */}
 
       <Typography variant="h1" sx={{ textAlign: "center", marginTop: 2 }}>

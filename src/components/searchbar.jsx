@@ -15,7 +15,7 @@ function SearchBar({ inputCity, setInputCity, onSearch }) {
         value={inputCity}
         onChange={(e) => setInputCity(e.target.value)}
       />
-      <Button variant="contained" color="primary" onClick={onSearch}>
+      <Button variant="contained" color="primary" onClick={onSearch} size="small">
         Get Weather
       </Button>
     </Div>
